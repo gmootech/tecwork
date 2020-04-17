@@ -1,0 +1,38 @@
+/*
+ Theme Name:   Eonet Child
+ Template:     eonet
+ Text Domain:  eonet
+*/
+
+.eo-demo-text-2em p { font-size: 2em; }
+.eo-demo-text-1-5em p { font-size: 1.5em; }
+.eo-demo-text-1-3em p { font-size: 1.3em; }
+.eo-demo-text-1-2em p { font-size: 1.2em; }
+.eo-demo-text-1-1em p { font-size: 1.1em; }
+
+
+.demo_features_list {
+    text-align: center;
+    margin-bottom: 35px
+}
+.demo_features_list:last-child {
+    margin-bottom: 0;
+}
+
+.demo_features_list .aio-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    transform: scale(1.0);
+    transition: transform .2s ease-in-out;
+}
+
+.demo_features_list .aio-icon-box:hover .aio-icon {
+    transform: scale(1.1);
+}
+
+.demo_features_list a {
+    color: #333;
+}
