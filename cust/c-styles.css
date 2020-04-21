@@ -86,4 +86,10 @@
 .img-prop {
 	height: 380px;
 }
-
+.mini ul{
+	list-style-image: url("../media/check-mark.png");
+	font-size: 12px;
+}
+. widget-error-cust{
+	width: 370px;
+}
