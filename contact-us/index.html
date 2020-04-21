@@ -237,9 +237,8 @@ a, #eo-extra-title .eo-icons-nav li.current a, #eo-extra-title .eo-icons-nav li.
 
 <script type='text/javascript' src='../wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.minb2f9.js?ver=4.3.0'></script>
 <script type='text/javascript' src='../wp-content/plugins/buddypress/bp-groups/js/widget-groups.minb2f9.js?ver=4.3.0'></script>
-
-
 <script type='text/javascript' src='../wp-content/plugins/buddypress-media/app/assets/js/rtmedia.min62df.js?ver=4.5.6'></script>
+
 		
 </head>
 
@@ -285,10 +284,7 @@ a, #eo-extra-title .eo-icons-nav li.current a, #eo-extra-title .eo-icons-nav li.
 	        <div id="eo-content-wrapper" class="eo-boxed">
 
 	            
-	            <div id="eo-main-search">
-	                <a href="javascript:void(0);" id="eo-main-search-close" data-placement="top" data-toggle="tooltip" title="Close the search box"><i class="fa fa-times"></i></a>
-	                <form class="eo-search-form" role="search" method="get" action="../index.html" ><input type="text" name="s" id="s" placeholder="Search..."/><input type="hidden" name="searchsubmit" id="searchsubmit" value="true" /><button type="submit" name="searchsubmit"><i class="fa fa-search"></i></button></form>	            </div>
-
+	            
     		<header id="eo-content-header" class="eo-header-type-featured"  style="min-height: 300px;">
 
             
@@ -345,20 +341,15 @@ contact@tecscripts.com</p>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div role="form" class="wpcf7" id="wpcf7-f426-p420-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"></div>
-<form action="" method="post" class="wpcf7-form" novalidate="novalidate">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="426" />
-<input type="hidden" name="_wpcf7_version" value="5.1.3" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f426-p420-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="420" />
-</div>
-<p><label>Your Name (required)</label><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span><br />
-<label>Your Email (required)</label><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span><br />
-<label>Subject</label><span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span><br />
-<label>Your Message</label><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span><br />
+<div class="alert alert-success" role="alert" id="sendStatus" style="display:none;" > </div>
+<div class="alert alert-danger" role="alert" id="formErr" style="display:none;"></div>
+<form action="https://script.google.com/macros/s/AKfycbwgVaREfvFKZNkngJE2tXIaFOHFVCOSxcO8-EUwIg/exec" method="post" id="contactFrm" class="wpcf7-form contactFrm" novalidate="novalidate">
+<p><label>Your Name (required)</label><span class="wpcf7-form-control-wrap your-name"><input type="text" id="name" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"  required /></span><br />
+<label>Your Email (required)</label><span class="wpcf7-form-control-wrap your-email"><input type="email" id="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"  aria-required="true" aria-invalid="false" /></span><br />
+<label>Subject</label><span class="wpcf7-form-control-wrap your-subject"><input type="text" id="subject" name="subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span><br />
+<label>Your Message</label><span class="wpcf7-form-control-wrap your-message"><textarea id="message" name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span><br />
 <br />
-<input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+<input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" onsubmit="return validateForm()" /></p>
 <div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div></div></div></div>
 
 	</div><!-- .entry-content -->
@@ -438,12 +429,64 @@ contact@tecscripts.com</p>
         </div>
 <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places&amp;language=en&amp;key=AIzaSyCLV47B9xwEPqptz2HVvyVWfv01jubb-hI&amp;ver=5.2.2'></script>
 
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/www.example.com\/eonet\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='../wp-content/plugins/contact-form-7/includes/js/scriptsbdeb.js?ver=5.1.3'></script>
+<!--custom -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+<script src="../js/cust-script.js"></script> 
+<script>
+$(document).ready(function(){
+//validate input
+  $('form.contactFrm').on('submit', function() {
+  var nm = document.forms["contactFrm"]["name"].value;
+  var email = document.forms["contactFrm"]["email"].value;
+  var subject = document.forms["contactFrm"]["subject"].value;
+  var msg = document.forms["contactFrm"]["message"].value;
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  if (nm == "") {
+  document.getElementById("formErr").style.display = "block";
+    document.getElementById("formErr").innerHTML = "Please enter your name.";
+    return false;
+  }else if(reg.test(email) == false) {
+    document.getElementById("formErr").innerHTML = "Please enter a valid email."; 
+    return false;
+  }else if(subject =="") {
+    document.getElementById("formErr").innerHTML = "Please enter a subject.";
+	return false;
+  }else if(msg =="") {
+    document.getElementById("formErr").innerHTML = "Please enter a message.";
+	return false;
+  }else {
+	document.getElementById("formErr").style.display = "none";
+	var currentForm = $(this),
+		url = currentForm.attr('action'),
+		type = currentForm.attr('method'),
+		data = {};
+	currentForm.find('[name]').each(function(index, value) {
+		var formData =$(this), name = formData.attr('name'), value = formData.val();
+		data[name] = value;
+	});
+	
+	$.ajax({
+		url: url,
+		type: type,
+		data: data,
+		success: function(response) {
+			//success message
+			messageStatus();
+			//document.getElementById("contactFrm").reset();
+		},
+		error: function(xhr, status, error) {
+      // check status && error
+   },
+   dataType: 'text'
+	});
+	return false;
+}	
+});
 
+});
+</script>
 </body>
 </html>
